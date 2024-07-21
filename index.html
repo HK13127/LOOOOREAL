@@ -1,232 +1,366 @@
-<div class="tbox">
-	<body onload="countTime()" >  
-		<div class="xbtext">💰 薪 贫 气 荷 🪷</div>
-			<div class="count-time">
-				<hk1 id="_h">00</hk1>
- 				<hk1>时</hk1>
- 				<hk1 id="_m">00</hk1>
-				<hk1>分</hk1>
-  				<hk1 id="_s">00</hk1>
- 				<hk1>秒</hk1>
-			</div>
-		</div>
-	</div>
-<div class="bbox">
-	<div class="xztext">🪷 好运莲莲 🪷</div>
-	<div class="box"></div></div>
-
-<div class="par">
-	<div class="show">
-		⏱️⏱️⏱️长按加速下班🐼🐼🐼
-		<div class="hover-show">
-			已为您加速1秒，继续努力！👀
-		</div>
-	</div>
-</div>
-
-<div class="author">Made By HK</div>
-
-<style>
-body{
-/*渐变系列*/
-	background-image: linear-gradient(to right,#e3fdfd70, #2ec5e190 ); 
-	background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /*天空蓝渐变*/
-	background: linear-gradient(135deg, #ff9a9e, #fad0c4); /*瑰丽紫红渐变*/
-	background: linear-gradient(135deg, #a8e063, #56ab2f); /*自然绿意渐变*/
-	background: linear-gradient(135deg, #292a3a, #536976); /*秘暗夜渐变*/
-	background: linear-gradient(135deg, #ff00cc, #ffcc00, #00ffcc, #ff0066); /*多彩糖果渐变*/
-	background: linear-gradient(135deg, #272727, #4a4a4a, #6d6d6d, #909090, #b3b3b3, #d6d6d6, #f9f9f9); /*金属质感渐变*/
-	background: linear-gradient(135deg, #ffbe0c, #ffda0c, #fff70c, #c2ff0c, #7aff0c); /*热带夏日渐变*/
-	background: linear-gradient(135deg, #001f3f, #0088a9, #00c9a7, #92d5c6, #ebf5ee); /*星空夜幕渐变*/
-	background: linear-gradient(135deg, #f6d365, #fda085); /*温暖阳光渐变*/
-	background: linear-gradient(135deg, #c7e9fb, #a6defa, #80d4f9, #5bc9f8, #35bef7); /*雪山冰川渐变*/
+/* ---------- 夜间模式 ---------- */
+.card.nightMode { background: #010101; }
+.nightMode .dreams { background: #1c1c1e; }
+.nightMode .words { background: #1c1c1e; }
+.nightMode .box { background: #1c1c1e; }
+.nightMode .bbox { background: #1c1c1e; }
+.nightMode .title { color: #ffffff; }
+.nightMode .time { color: #98989e; }
+.nightMode .t1{ color: white; }
+.nightMode .t2{ color: white; }
+.nightMode .t3{ color: white; }
+.nightMode hk0{ background-color: #7f7f7f; color: #ebebeb;}
+.nightMode hr{ border: 1.5px solid #2c2c2c; }
+.nightMode h2{ border-bottom: 3px solid #2c2c2c; }
+.nightMode a:link {color:#fff; text-decoration: none;}
+.nightMode a:hover {background:grey;}
+.nightMode .fb{ background-color: #2c2c2c; border: 1px solid #2c2c2c;}
+.nightMode .mb{ background-color: #3eb575; border: 1px solid #3eb575;}
 
 
-
-/*乐队*/
-	background-image:url('https://p2.music.126.net/NHuKz-uypAAbd5AAzGsfrQ==/109951167028936100.jpg?param=640y300');/*新裤子*/
-
-
-
-/*海贼王*/
-	background-image: url(https://images5.alphacoders.com/134/1346850.png);     /* 海贼王10人团 艾格赫德 */
-	background-image: url(https://images4.alphacoders.com/134/1348641.jpeg);     /* 海贼王觉醒路飞 */
-	background-image: url(https://images7.alphacoders.com/134/1349525.jpeg);     /* 海贼王10人海报 */
-	background-image: url(https://images7.alphacoders.com/728/728185.png);     /* 海贼王 全家福*/
-	background-image: url(https://images.alphacoders.com/128/1284982.jpg);     /*海贼王 白胡子海贼团*/
-	background-image: url(https://images3.alphacoders.com/134/1346859.png);     /* 海贼王10人过场动画 */
-
-
-
-/*排球少年*/
-	background-image: url(https://images7.alphacoders.com/127/1277633.jpg);     /*排球 乌野*/
-	background-image: url(https://images4.alphacoders.com/831/831075.png);     /*排球 全家福*/
-
-
-
-/*情绪图片*/
-	background-image: url(https://images4.alphacoders.com/104/1049373.jpg);     /*山野小屋*/
-
-
-
-/*GIF*/
-	background-image: url(https://giffiles.alphacoders.com/221/221581.gif);     /*海贼王 op动画*/
-	background-image: url(https://giffiles.alphacoders.com/218/218333.gif);     /*樱花动画*/
-	background-image: url(https://giffiles.alphacoders.com/221/221540.gif);     /*委屈的憨豆*/
-	background-image: url(https://giffiles.alphacoders.com/221/221537.gif);     /*瑟瑟发抖的海绵宝宝*/
-
-
-
-/*定制*/
-	background-image:url(马马的马赛克.jpg);  /*马马的马赛克*/
-
-
-/*========正在使用=======*/
-	background-position: center top;     /* 背景图垂直、水平均居中 */
-	background-repeat: no-repeat;     /* 背景图不平铺 */
-	background-attachment: fixed;     /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-	background-size: cover;    /* 让背景图基于容器大小伸缩 */
-	background-color: #464646;     /* 设置背景颜色，背景图加载过程中会显示背景色 */
-
-
-	background-image: url();     /**/
-	background-image: url();     /**/
-	background-image: url(https://images3.alphacoders.com/125/1258197.png);     /*路飞草帽*/
-	background-image: url(https://images5.alphacoders.com/126/1266405.jpg);     /*路飞三兄弟*/
-	background-image: url(https://images4.alphacoders.com/133/1339110.png);     /*金黄麦田*/
-	background-image: url(https://images8.alphacoders.com/133/1337496.png);     /*薪贫气荷01*/
-
+/* 卡片全局样式 */
+.card {
+	margin: 0 5px;
+	font-family: 微软雅黑;
+	text-align: left;
+	color: #333333;
+	background: url('https://static.smartisanos.cn/account.common/img/v3/bg_7fb769c373.png');
+	background-repeat: repeat;
+	background: #f3f2f3;
+	background: url('https://www.cfa.org.cn//uiFramework/commonResource/zip/cfaAll/cfaAll/images/noise1.png');
 }
 
-.par {  /*长按*/  
-	width: 350px;
-	height: 30px;
-	margin: 10px auto;
-	color: #f9f9fb;
-	font-weight: 700;
-	letter-spacing: 3px;
-	font-size: 20px;
-	line-height: 30px;
-	background-color: #f1497a50;
-	overflow: hidden;
-	text-align: center;
+
+/* 区块全局样式 */
+.single {
+
+	margin: 20px 10px;
+	background: linear-gradient(#f7f7f7,#f6f6f3);
 	border-radius: 10px;
-	padding: 10px 0;
-	box-shadow: 3px 3px 5px #8d824770;
+	box-shadow: rgba(0,0,0,.3) 0 2px 8px;
+	background: #F5F5F7;
 }
+.single:hover { box-shadow: 0 0 10px rgba(57, 101, 204,.8); }
 
-.par .show:hover {
-	padding-top: 70px;
+
+
+.double {
+	margin: 20px 10px;
+	background: linear-gradient(#f7f7f7,#f6f6f3);
+	border-radius: 10px;
+	box-shadow:  rgba(0,0,0,.2) inset 0 3px 8px;
+	background: #fff;
 }
+.double:hover { box-shadow: 0 0 10px rgba(57, 101, 204,.8); }
 
-.par .hover-show {
-	margin-top: -100px;
-}
 
-.tbox{  /*顶部倒计时*/  
-	margin: 10px;
-	padding: 120px 0 70px 0;
-
-}
-
-.bbox{  /*中间现在时间*/  
-	margin: 10px;
-	padding: 100px 0 100px 0;
-
-}
-
-.box{  /*现在时间*/  
-	text-align: center;
+.title {
+	font-family: 楷体;
 	font-size: 30px;
-	color: #f5f5f5;
-	text-shadow: 3px 3px 3px #80808070;
-}
-
-
-
-.xbtext{  /*倒计时顶部文字*/  
-	font-size: 30px;
-	color: #fff;
-	text-align: center;
-	text-shadow: 3px 3px 1px #00000070;
-	letter-spacing: 2px;
-	line-height: 30px;
-}
-
-.xztext{  /*现在时间文字*/  
-	font-size: 15px;
-	color: #f5f5f5;
-	text-align: center;
-	text-shadow: 2px 2px 2px #80808070;
-}
-
-.author{  /*hk*/  
-	font-size: 15px;
-	color: #eaeaea;
-	text-align: center;
-	text-shadow: 3px 3px 1px #80808070;
-}
-
-.count-time {  /*大的倒计时*/  
-	text-align: center;
-	font-size: 110px;
+	padding: .5em 0em 0em 1em;
+	color:#3b3b3b;
 	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+
+.time{
+	font-family: 微软雅黑;
+	font-size: 15px;
+	padding: 0.2em 1em 0.6em 2em;
+	color: #98989e;
+	letter-spacing: 2px;
+	margin: 0 0 0px 0;
+}
+
+hr{
+	color:#e9e9e9;
+	border: 1.5px solid #e9e9e9;
+	border-radius: 10px;
+	align: left; 
+	width: auto;
+	margin: 0px 20px 10px 15px;
+}
+
+
+.t1{
+	font-family: ;
+	font-size: 12px;
+	padding: 1.5em 1em 0em 1em;;
+	color:#3b3b3b;
+	font-weight: 700;
+	letter-spacing: 1px;
+	position: sticky;
+	top: 0;
+	opacity: 0.8;
+}
+
+.t2 {
+	font-size: 15px;
+	padding: 1em 1.5em; 
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 2em;
+}
+
+.day {
+	font-family: Microsoft Yahei;
+	font-weight: 900;
+	font-size: 50px;
+	text-align: justify;
+	text-indent: 0.5em;
+	line-height: 2em;
 	color: #fff;
-	 text-shadow: 5px 5px 1px #00000070;
+	background-color: #000;
+}
+
+
+.zhuhao {
+	font-family: Microsoft Yahei;
+	font-weight: 900;
+	font-size: 25px;
+	padding: 1em 1.5em; 
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 2em;
+	color: #fff;
+	background-color: #d6612c;
+
+}
+
+
+.fangshai {
+	font-family: Microsoft Yahei;
+	font-weight: 900;
+	font-size: 25px;
+	padding: 1em 1.5em; 
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 2em;
+	color: #fff;
+	background-color: #d6edbb;
+
+}
+
+
+.meifa {
+	font-family: Microsoft Yahei;
+	font-weight: 900;
+	font-size: 25px;
+	padding: 1em 1.5em; 
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 2em;
+	color: #fff;
+	background-color: #9ea0cf;
+
 }
 
 
 
-</style>
+hk0{
+	color: #333;
+	background: #ffffff;
+	padding: 3px 5px;
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	box-shadow: rgba(0,0,0,.2) 0 1px 5px ;
+}
 
-<script type="text/javascript">  
-        function countTime() {  
-            //获取当前时间  
-            var date = new Date();  
-            var hours = date.getHours();//时
-            var minutes= date.getMinutes();//分
-            var seconds= date.getSeconds();//秒
-
-            //统一化为秒数，方便计算				
-            var kaishi = seconds + minutes * 60 + hours * 60 * 60;
-            var jieshu = 24 * 60 * 60;
-            
-            //计算差值
-            var cha;
-            if(hours >= 24) cha = jieshu + 24 * 60 * 60-kaishi;
-            else cha = jieshu - kaishi;
-            var h,m,s; 
-
-            h = Math.floor(cha/60/60%24);  
-            m = Math.floor(cha/60%60);  
-            s = Math.floor(cha%60);
-
-            // console.log(h+":"+m+":"+s);
-            document.getElementById("_h").innerHTML = h;  
-            document.getElementById("_m").innerHTML = m;  
-            document.getElementById("_s").innerHTML = s;   
-            setTimeout(countTime,1000);  
-        }  
-    </script>
+hk00{
+	color: #3965cc;
+	background: #e5efff;
+	border: 1px solid #93b2f7;
+	padding: 3px 5px;
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 4px;
+	box-shadow: rgba(0,0,0,.2) 0 1px 5px ;
+}
 
 
 
-<script>
-    const divObj=document.getElementsByClassName('box')[0];
-    setInterval(()=>{
-        const nowTime=getNowTime();
-        divObj.innerText=nowTime;
-    })
-    function getNowTime(){
-        const date=new Date();
-        const year=date.getFullYear();
-        const month=date.getMonth();
-        const day=date.getDate();
-        const hour=date.getHours();
-        const minite=date.getMinutes();
-        const seconds=date.getSeconds();
-        return `${hour} 点 ${minite} 分 ${seconds<10?'0'+seconds:seconds} 秒`
-    }
-</script>
+h1{
+	font-size: 20px;
+	text-align: center;
+	text-indent: 0em;
+	padding: 0 0 8px 0;
+	border-bottom: 3px solid #e9e9e9;
+	margin: 20px 25px;
+	letter-spacing: 1px;
+}
 
-</body> 
+/* 聊天对话框 朋友*/
+.fb{
+	text-indent: 0em;
+	display: table;
+	max-width: 280px;
+	line-height: 1.5em;
+	border-radius: 6px;
+	border: 1px solid #ededed;
+	padding: 6px 12px;
+	margin: 15px 0 15px 0;
+	background-color: #fff;
+}
+
+.yyfb{
+	display: table;
+	text-indent: 0em;
+	max-width: 280px;
+	border-radius: 2px;
+	font-size: 10px;
+	margin: -10px 0 20px 0;
+	padding: 1px 5px;
+	line-height: 1.5em;
+	background-color: rgba(232,232,232,.6);
+}
+
+li{ list-style: none; clear:both;	margin: 0px 0 20px 0;}
+
+/* 聊天对话框 自己*/
+.mb{
+	float: right;
+	text-indent: 0em;
+	max-width: 280px;
+	line-height: 1.5em;
+	border-radius: 6px;
+	border: 1px solid #ededed;
+	padding: 6px 12px;
+	margin: 0 0 15px 0;
+	background-color: #9eea6a;
+}
+
+.yymb{
+	float: right;
+	text-indent: 0em;
+	max-width: 280px;
+	border-radius: 2px;
+	font-size: 10px;
+	margin: -10px 0 20px 0;
+	padding: 1px 5px;
+	line-height: 1.5em;
+	background-color: rgba(232,232,232,.6);
+}
+
+.timecenter { /* 图像居中 */
+	clear: both;
+	display: block;
+	margin: 10px auto;
+	width: fit-content;
+	text-indent: 0em;
+	border-radius: 3px;
+	font-size: 10px;
+	text-align: center;
+	padding: 1px 5px;
+	line-height: 1.5em;
+	background-color: rgba(232,232,232,.6);
+}
+
+
+
+/* --------------- 文本格式化标签 --------------- */
+bi {							/* 粗体 */
+	font-family: 微软雅黑;					/* 字体 */
+	color: #fff;						/* 颜色 */
+	font-weight: 400;					/* 字重 */
+	border: 0rem solid none;			/* 边框样式 */
+	text-decoration: none;				/* 字体样式 */
+	font-size: 90%;					/* 大小 */
+	background: #ed5a65;					/* 背景色 */
+}
+
+
+ii {							/* 斜体 */
+	font-family: 微软雅黑;					/* 字体 */
+	font-style: normal;					/* 字体样式 */
+	color: #fff;						/* 颜色 */
+	font-weight: 400;					/* 字重 */
+	font-size: 90%;					/* 大小 */
+	background: #ffd111;					/* 背景色 */
+}
+
+
+underline {							/* 下划线 */		
+	font-family: 微软雅黑;					/* 字体 */
+	color: #fff;						/* 颜色 */
+	font-weight: 400;					/* 字重 */
+	border: 0rem solid none;			/* 下划线粗细 */
+	text-decoration: none;		/* 下划线颜色 */
+	font-size: 90%;					/* 字体大小 */
+	background: #0eb0c9;					/* 背景色 */
+}
+
+
+strike {						/* 删除线 */
+	font-family: 微软雅黑;					/* 字体 */
+	color: #c0c0c0;						/* 颜色 */
+	text-decoration: line-through #c0c0c0;		/* 字体样式 */
+	font-weight: 400;					/* 字重 */
+	font-size: 90%;					/* 大小 */
+}
+
+
+sup {							/* 下划线 */		
+	font-family: 微软雅黑;					/* 字体 */
+	color: white;						/* 颜色 */
+	font-style: normal;					/* 字体样式 */
+	font-weight: 400;					/* 字重 */
+	text-decoration: normal;		/* 下划线颜色 */
+	font-size: 90%;					/* 字体大小 */
+	background: #45b787;					/* 背景色 */
+}
+
+
+sub {							/* 下划线 */		
+	font-family: 微软雅黑;					/* 字体 */
+	color: white;						/* 颜色 */
+	font-weight: 400;					/* 字重 */
+	text-decoration: none;		/* 下划线颜色 */
+	font-size: 80%;					/* 字体大小 */
+	background: #cc5595;					/* 背景色 */
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+/* 创建三个不相等的列 默认三列 50 25 25 */
+.column {
+	float: left;
+	margin: -10px 0;
+}
+
+/* 左右两侧宽度 */
+.column.side { width: 25%; }
+
+/* 中间区域宽度 */
+.column.middle { width: 50%; }
+
+/* 列后面清除浮动 */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* 响应式布局 - 宽度小于1024px时设置上一下二布局 */
+@media screen and (max-width: 1024px) {
+	.column.middle { width: 100%; }
+	.column.side { width: 50%; }
+}
+
+/* 响应式布局 - 宽度小于600px时设置上下统一布局 */
+@media screen and (max-width: 600px) {
+	.column.side, .column.middle { width: 100%; }
+}
